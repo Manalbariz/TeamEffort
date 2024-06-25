@@ -1,0 +1,13 @@
+<app-header/>
+<a routerLink="auth" class="auth-button">Go to Authentication</a>
+<main >
+  <ul id="users">
+    <li *ngFor="let user of users">
+      <app-user [isSelected]="user.id === selectedUser?.id" [user]="user" (selected)="selectUser($event)"/>
+    </li>
+  </ul>
+  <app-tasks *ngIf="selectedUser; else notSelected" [name]="selectedUser.name" [userId]="selectedUser.id"  ></app-tasks>
+  <ng-template #notSelected>
+    <p id="notSelected">Select a user to see his TASKS </p>
+  </ng-template>
+</main>

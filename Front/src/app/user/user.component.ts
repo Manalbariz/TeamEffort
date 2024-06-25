@@ -1,16 +1,8 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
-
-import {NgForOf} from "@angular/common";
 import {User} from "../utils/user";
-import {CardComponent} from "../app/shared/card/card.component";
 
 @Component({
   selector: 'app-user',
-  standalone: true,
-  imports: [
-    NgForOf,
-    CardComponent
-  ],
   templateUrl: './user.component.html',
   styleUrl: './user.component.scss'
 })

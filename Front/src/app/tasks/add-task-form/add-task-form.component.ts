@@ -1,16 +1,9 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {NgIf} from "@angular/common";
-import {FormsModule} from "@angular/forms";
 import {Task} from "../../utils/task";
 import {TaskService} from "../tasks.service";
 
 @Component({
   selector: 'app-add-task-form',
-  standalone: true,
-  imports: [
-    NgIf,
-    FormsModule
-  ],
   templateUrl: './add-task-form.component.html',
   styleUrl: './add-task-form.component.scss'
 })
